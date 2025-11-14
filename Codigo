@@ -1,0 +1,137 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String skin = "\uD83E\uDD83";
+        String nombremascota;
+        Random random = new Random();
+        int hambre;
+        int energia;
+        int dinero;
+        int felicidad;
+
+        boolean casino = false;
+        boolean ruleta = false;
+        boolean casino = false;
+        boolean porro = false;
+
+        System.out.println("Como te llamas?");
+        String nombreamo = sc.nextLine();
+        System.out.println("Hola " + nombreamo);
+
+        while (true) {
+            System.out.println("Que nombre le vas a poner a tu mascota?");
+            nombremascota = sc.nextLine();
+            System.out.println("Tu mascota se llama " + nombremascota);
+            System.out.println("Que skin te gustaria ponerle");
+            System.out.println("1. \uD83E\uDD83");
+            System.out.println("2. \uD83E\uDD82");
+            System.out.println("3. \uD83D\uDC19");
+            System.out.println("4. \uD83E\uDDA7");
+            System.out.println("5. \uD83E\uDD9F");
+            int opcion = sc.nextInt();
+
+            switch (opcion) {
+                case 1:
+                    if (opcion == 1)
+                        skin = "🦃";
+                    System.out.println("Has escojido: 🦃");
+                    break;
+                case 2:
+                    if (opcion == 2)
+                        skin = "\uD83E\uDD82";
+                    System.out.println("Has escojido: \uD83E\uDD82");
+                    break;
+                case 3:
+                    if (opcion == 3)
+                        skin = "\uD83D\uDC19";
+                    System.out.println("Has escojido: \uD83D\uDC19");
+                    break;
+                case 4:
+                    if (opcion == 4)
+                        skin = "🦧";
+                    System.out.println("Has escojido: 🦧");
+                    break;
+                case 5:
+                    if (opcion == 5)
+                        skin = "\uD83E\uDD9F";
+                    System.out.println("Has escojido: \uD83E\uDD9F");
+            }
+            System.out.println("Tu mascota quedaria asi " + nombremascota + skin);
+
+            System.out.println("Es de tu agrado la mascota creada?");
+            String lineanula = sc.nextLine();
+            String respuesta = sc.nextLine();
+            if (respuesta.equalsIgnoreCase("no")) {
+            } else if (respuesta.equalsIgnoreCase("si")) {
+                break;
+            }
+        }
+        System.out.println("Hora de empezar a jugar");
+
+        energia = 5;
+        hambre = 5;
+        felicidad = 5;
+        dinero = 5;
+
+        while (true) {
+        System.out.println(nombremascota + skin);
+        System.out.println("Energia: " + energia + " Hambre: " + hambre + " Felicidad: " + felicidad + " Dinero: " + dinero);
+        System.out.println("----------------------------------------------------------------------------------------------");
+        System.out.println("Que quieres hacer");
+        System.out.println("1. Dar de comer");
+        System.out.println("2. Jugar");
+        System.out.println("3. Dormir");
+        System.out.println("4. Tienda");
+        System.out.println("5. Ver estado");
+        System.out.println("6. Salir");
+
+            int opcionmenu = sc.nextInt();
+            if (opcionmenu == 1) {
+                System.out.println("Has escojido darle de comer, estas son las opciones que tienes:");
+                int cuy = random.nextInt(10);
+                int hormigasculonas = random.nextInt(10);
+                int surstromming = random.nextInt(10);
+                int sannakji = random.nextInt(10);
+                int  tarantulasfritas = random.nextInt(10);
+                cuy = 1;
+                hormigasculonas = 2;
+                surstromming = 3;
+                sannakji = 4;
+                tarantulasfritas = 5;
+                System.out.println("1. Cuy: " + cuy + "\uD83D\uDC39" + " 2. Hormigas culonas: " + hormigasculonas + "\uD83D\uDC1C" + " 3. Surstromming: " + surstromming + "\uD83D\uDC1F" + " 4. Sannakji: " + sannakji + "\uD83E\uDD91" + " 5. Tarantulas fritas: " + tarantulasfritas + "\uD83D\uDD77\uFE0F");
+                System.out.println("Cual te gustaria darle?");
+                int comidaelegida = sc.nextInt();
+                System.out.println("Has escojido: " + comidaelegida);
+                if(opcionmenu == 1)
+                    hambre += 3;
+                energia -= 1;
+            }
+            if (opcionmenu == 3){
+                System.out.println("Has escojido dormir");
+                energia += 4;
+                felicidad -= felicidad;
+            }
+            if (opcionmenu == 2){
+                System.out.println("Has escojido jugar");
+                System.out.println("Que juego vas a querer jugar:");
+                System.out.println("1. Piedra, papel o tijera");
+                System.out.println("2. Dados random");
+                System.out.println("3. Casino");
+                int piedrapapeltijera = 1;
+                int dadosrandom = 2;
+                int casino = 3;
+                int eleccion = sc.nextInt();
+                if (eleccion == 3 && casino == false){
+                    System.out.println("Has de desbloquearlo en la tienda, paga!!!");
+                }
+                
+            }
+        }
+
+
+    }
+}

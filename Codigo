@@ -122,6 +122,7 @@ public class Main {
                     System.out.println("1. Cuy: " + cuy + "\uD83D\uDC39" + " 2. Hormigas culonas: " + hormigasculonas + "\uD83D\uDC1C" + " 3. Surstromming: " + surstromming + "\uD83D\uDC1F" + " 4. Sannakji: " + sannakji + "\uD83E\uDD91" + " 5. Tarantulas fritas: " + tarantulasfritas + "\uD83D\uDD77\uFE0F");
                     System.out.println("Cual te gustaria darle?");
                     int comidaelegida = sc.nextInt();
+                    sc.nextLine();
                     System.out.println("Has escojido: " + comidaelegida);
                     hambre += 3;
                     energia -= 1;
@@ -323,21 +324,6 @@ public class Main {
                 if (felicidad >= 10) {
                     felicidad = 10;
                 }
-                if (cuy <= 0) {
-                    cuy = 0;
-                }
-                if (hormigasculonas <= 0) {
-                    hormigasculonas = 0;
-                }
-                if (surstromming <= 0) {
-                    felicidad = 0;
-                }
-                if (sannakji <= 0) {
-                    sannakji = 0;
-                }
-                if (tarantulasfritas <= 0) {
-                    tarantulasfritas = 0;
-                }
                 if (opcionmenu == 6) {
                     salirjuego = true;
                     break;
@@ -356,9 +342,7 @@ public class Main {
                         return;
                     }
                 }
-                if (salirjuego) {
-                    break;
-                }
+
             }
             if (salirjuego) {
                 break;
